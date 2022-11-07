@@ -1,0 +1,82 @@
+- theme: Backend-selected
+  title: Heizung
+  path: heizung
+  badges: []
+  cards:
+    - type: vertical-stack
+      cards:
+        - type: entities
+          entities: []
+          title: Warmwasser
+        - type: custom:numberbox-card
+          border: true
+          entity: input_number.wp_brauchwasser_solltemp_rw
+          name: Warmwasser Solltemp.
+          step: '0.1'
+        - type: entities
+          entities:
+            - entity: sensor.dw_boiler_temp
+            - entity: sensor.dw_boiler_solar_temp
+            - entity: sensor.dw_boiler_wp_temp
+            - entity: binary_sensor.dw_anford_wasser_wp
+              name: Anforderung Warmwasser WP
+            - entity: binary_sensor.dw_wp_running
+              name: WP Läuft?
+            - entity: sensor.dw_vorlauf_nieder_temp
+            - entity: sensor.dw_wp_status
+              name: Status Wärmepumpe
+              icon: mdi:state-machine
+            - entity: sensor.dw_status_wp_restzeit
+              name: Status WP Restzeit
+            - entity: binary_sensor.dw_anford_solar
+              name: Anforderung Warmwasser Solar
+            - entity: sensor.dw_solarkollektor_temp
+            - entity: sensor.dw_aussenluft_temp
+        - type: custom:numberbox-card
+          border: true
+          entity: input_number.wp_solaranlage_max_ladetemp_rw
+          step: '1'
+          name: Max. Ladetemp. Solar
+        - type: custom:numberbox-card
+          border: true
+          entity: input_number.wp_solaranlage_einschaltschw_solarpumpe_rw
+          name: Einschaltschw. Solar
+          step: '0.1'
+          unit: °C
+        - type: custom:numberbox-card
+          border: true
+          entity: input_number.wp_solaranlage_ausschaltschw_solarpumpe_rw
+          name: Ausschaltschw. Solar
+          step: '0.1'
+    - type: vertical-stack
+      cards:
+        - type: entities
+          entities: []
+          title: Heizung
+        - type: entities
+          entities:
+            - entity: sensor.dw_raum_temp
+              name: Temperatur Thermostat EG
+        - type: custom:numberbox-card
+          border: true
+          entity: input_number.lu_raumsoll_rw
+          step: '0.1'
+          name: Solltemp.
+    - type: vertical-stack
+      cards:
+        - type: entities
+          entities: []
+          title: Lüftung
+        - type: entities
+          entities:
+            - entity: input_select.lu_betriebsart_rw
+              name: Betriebsart Lüftung
+            - entity: sensor.dw_akt_luefterstufe
+              icon: mdi:fan
+            - entity: sensor.aerosmart_drehzahl_zuluftventilator
+              icon: mdi:fan-plus
+              name: Drehzahl Zuluft
+            - entity: sensor.aerosmart_drehzahl_abluftventilator
+              icon: mdi:fan-minus
+              name: Drehzahl Abluft
+            - entity: sensor.dw_aussenluft_temp
