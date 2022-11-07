@@ -18,3 +18,8 @@ automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
 
 Note: I moved my other scripts.yaml and my automations.yaml in those directories as well so that they load as well
+
+
+<img width="1048" alt="Screenshot 2022-11-06 at 22 58 54" src="https://user-images.githubusercontent.com/84347442/200252545-c423ac29-3d78-4b81-be75-b6889710dcb7.png">
+
+![Screenshot 2022-11-06 at 23 24 22](https://user-images.githubusercontent.com/84347442/200252579-3aa1069a-507f-4a61-97d5-2d8e225c6033.png)
