@@ -1,0 +1,312 @@
+- id: '1667599403868'
+  alias: dw_update_values
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+  condition: []
+  action:
+  - service: script.dw_read_200
+    data: {}
+  - service: script.dw_read_202
+    data: {}
+  - service: script.dw_read_216
+    data: {}
+  - service: script.dw_read_226
+    data: {}
+  - service: script.dw_read_800
+    data: {}
+  - service: script.dw_read_900
+    data: {}
+  - service: script.dw_read_902
+    data: {}
+  - service: script.dw_read_912
+    data: {}
+  - service: script.dw_read_914
+    data: {}
+  - service: script.dw_read_926
+    data: {}
+  - service: script.dw_read_928
+    data: {}
+  - service: script.dw_read_938
+    data: {}
+  - service: script.dw_read_946
+    data: {}
+  - service: script.dw_read_960
+    data: {}
+  - service: script.dw_read_1066
+    data: {}
+  - service: script.dw_read_1184
+    data: {}
+  - service: script.dw_read_1186
+    data: {}
+  - service: script.dw_read_5002
+    data: {}
+  - service: script.dw_read_5016
+    data: {}
+  - service: script.dw_read_5212
+    data: {}
+  - service: script.dw_read_7002
+    data: {}
+  - service: script.dw_read_7004
+    data: {}
+  - service: script.dw_read_7500
+    data: {}
+  - service: script.dw_read_wp_200
+    data: {}
+  - service: script.dw_read_wp_202
+    data: {}
+  - service: script.dw_read_wp_206
+    data: {}
+  - service: script.dw_read_wp_212
+    data: {}
+  - service: script.dw_read_wp_214
+    data: {}
+  - service: script.dw_read_wp_216
+    data: {}
+  - service: script.dw_read_wp_222
+    data: {}
+  - service: script.dw_read_wp_224
+    data: {}
+  - service: script.dw_read_wp_240
+    data: {}
+  - service: script.dw_read_wp_242
+    data: {}
+  - service: script.dw_read_wp_244
+    data: {}
+  - service: script.dw_read_wp_1032
+    data: {}
+  - service: script.dw_read_wp_1034
+    data: {}
+  - service: script.dw_read_wp_1036
+    data: {}
+  - service: script.dw_read_wp_1044
+    data: {}
+  - service: script.dw_read_wp_1140
+    data: {}
+  - service: script.dw_read_wp_1142
+    data: {}
+  - service: script.dw_read_wp_1196
+    data: {}
+  - service: script.dw_read_wp_1314
+    data: {}
+  - service: script.dw_read_wp_1316
+    data: {}
+  - service: script.dw_read_wp_1320
+    data: {}
+  - service: script.dw_read_wp_5016
+    data: {}
+  - service: script.dw_read_wp_5064
+    data: {}
+  - service: script.dw_read_wp_5176
+    data: {}
+  - service: script.dw_read_wp_5178
+    data: {}
+  - service: script.dw_read_wp_5180
+    data: {}
+  - service: script.dw_read_wp_5182
+    data: {}
+  - service: script.dw_read_wp_5186
+    data: {}
+  - service: script.dw_read_wp_5190
+    data: {}
+  - service: script.dw_read_wp_5192
+    data: {}
+  - service: script.dw_read_wp_5376
+    data: {}
+  - service: script.dw_read_wp_5378
+    data: {}
+  - service: script.dw_read_wp_5380
+    data: {}
+  - service: script.dw_read_wp_5382
+    data: {}
+  mode: single
+- id: '1667743738084'
+  alias: dw_set_soll_temp_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.lu_raumsoll_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id: button.nodered_bafd49f1ad25079c
+  mode: single
+- id: '1667744963240'
+  alias: dw_set_warmwasser_soll_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_brauchwasser_solltemp_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id: button.nodered_299a9d2b9b842fed
+  mode: single
+- id: '1667765738610'
+  alias: dw_set_betriebsart_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_select.lu_betriebsart_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id: button.dw_set_lu_betriebsart
+  mode: single
+- id: '1667767787620'
+  alias: dw_set_aussch_hyst_hz1_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_ausschaltpkt_hys_raumheizstufe_1_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id: button.dw_set_aussch_hyst_hz1
+  mode: single
+- id: '1667767912361'
+  alias: dw_set_aussch_hyst_hz2_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_ausschaltpkt_hys_raumheizstufe_2_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_aussch_hyst_hz1_2
+  mode: single
+- id: '1667767925175'
+  alias: dw_set_einsch_hyst_hz1_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_einschaltpkt_hys_raumheizstufe_1_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_einsch_hyst_hz1
+  mode: single
+- id: '1667768039498'
+  alias: dw_set_einsch_hyst_hz2_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_einschaltpkt_hys_raumheizstufe_2_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_einsch_hyst_hz2
+  mode: single
+- id: '1667768108954'
+  alias: dw_set_raumptemp_passkuehlung_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_raumtemp_passive_kuehlung_ein_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_raumtemp_passkuehlung
+  mode: single
+- id: '1667768162200'
+  alias: dw_set_aussch_schw_solar_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_solaranlage_ausschaltschw_solarpumpe_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_aussch_schw_solar
+  mode: single
+- id: '1667768202930'
+  alias: dw_set_einsch_schw_solar_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_solaranlage_einschaltschw_solarpumpe_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_einsch_schw_solar
+  mode: single
+- id: '1667768271635'
+  alias: dw_set_max_ladetemp_solar_onchange
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_number.wp_solaranlage_max_ladetemp_rw
+  condition: []
+  action:
+  - service: button.press
+    data: {}
+    target:
+      entity_id:
+      - button.dw_set_max_ladetemp_solar
+  mode: single
+- id: '1667769695897'
+  alias: dw_incr_warmwasser_soll_solar
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.dw_anford_solar
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: script.incr_warmwasser_soll_solar
+    data: {}
+  mode: single
+- id: '1667770248848'
+  alias: dw_decr_warmwasser_soll_solar
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.dw_anford_solar
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: script.decr_warmwasser_soll_solar
+    data: {}
+  mode: single

@@ -1,0 +1,665 @@
+input_number:
+  lu_aktive_luefterstufe:
+    name: LU_Aktive_Luefterstufe
+    min: 0
+    max: 4
+    step: 1
+    mode: slider
+    icon: mdi:fan
+
+  wp_energieoptimierung_rw:
+    name: WP_Energieoptimierung_RW
+    min: 20
+    max: 70
+    initial: 50
+    step: 1
+    mode: box
+    unit_of_measurement: "%"
+    icon: mdi:power-plug
+
+  lu_drehzahlabluft_r:
+    name: LU_DrehzahlAbluft_R
+    min: 0
+    max: 3500
+    step: 1
+    mode: box
+    unit_of_measurement: 1/min
+    icon: mdi:fan
+
+  lu_drehzahlzuluft_r:
+    name: LU_DrehzahlZuluft_R
+    min: 0
+    max: 3500
+    step: 1
+    mode: box
+    unit_of_measurement: 1/min
+    icon: mdi:fan
+
+  lu_aussenluft_r:
+    name: LU_Aussenluft_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  lu_raum_rw:
+    name: LU_Raum_RW
+    min: -28
+    max: 100
+    initial: 22
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  lu_raumsoll_rw:
+    name: LU_RaumSoll_RW
+    min: 14
+    max: 26
+    initial: 22.5
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  lu_sole_r:
+    name: LU_Sole_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_ausschaltpkt_hys_raumheizstufe_2_rw:
+    name: WP_Ausschaltpkt_Hys_RaumHeizstufe_2_RW
+    min: -1
+    max: 0
+    initial: 0
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_ausschaltpkt_hys_raumheizstufe_1_rw:
+    name: WP_Ausschaltpkt_Hys_RaumHeizstufe_1_RW
+    min: 0.1
+    max: 0.3
+    initial: 0.3
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_aussenluft_r:
+    name: WP_Aussenluft_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_solarkollektor_r:
+    name: WP_Solarkollektor_R
+    min: -39
+    max: 250
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_boiler_r:
+    name: WP_Boiler_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_boilerfuehler_solar_r:
+    name: WP_Boilerfuehler_Solar_R
+    min: -39
+    max: 250
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_boilerfuehler_wp_r:
+    name: WP_Boilerfuehler_WP_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_brauchwasser_solltemp_rw:
+    name: WP_Brauchwasser_Solltemp_RW
+    min: 20
+    max: 55
+    initial: 48
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_einschaltpkt_hys_raumheizstufe_1_rw:
+    name: WP_Einschaltpkt_Hys_RaumHeizstufe_1_RW
+    min: -0.3
+    max: -0.1
+    initial: -0.3
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_einschaltpkt_hys_raumheizstufe_2_rw:
+    name: WP_Einschaltpkt_Hys_RaumHeizstufe_2_RW
+    min: -1.5
+    max: -0.5
+    initial: -0.6
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_raum_rw:
+    name: WP_Raum_RW
+    min: -28
+    max: 100
+    initial: 22
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_raumsoll_rw:
+    name: WP_RaumSoll_RW
+    min: 14
+    max: 26
+    initial: 22.5
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_raumtemp_passive_kuehlung_ein_rw:
+    name: WP_Raumtemp_Passive_Kuehlung_ein_RW
+    min: 20
+    max: 26
+    initial: 26
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_solaranlage_ausschaltschw_solarpumpe_rw:
+    name: WP_Solaranlage_Ausschaltschw_Solarpumpe_RW
+    min: 1
+    max: 5
+    initial: 2
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_solaranlage_einschaltschw_solarpumpe_rw:
+    name: WP_Solaranlage_Einschaltschw_Solarpumpe_RW
+    min: 6
+    max: 12
+    initial: 8
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_solaranlage_max_ladetemp_rw:
+    name: WP_Solaranlage_Max_Ladetemp_RW
+    min: 50
+    max: 80
+    initial: 65
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_sole_r:
+    name: WP_Sole_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_temp_sole_nach_aussenluftvorwaermung_r:
+    name: WP_Temp_Sole_nach_Aussenluftvorwaermung_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_tempschw_aussenluft_heizen_kuehlen_rw:
+    name: WP_Tempschw_Aussenluft_Heizen_Kuehlen_RW
+    min: 12
+    max: 22
+    initial: 20.5
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  wp_vorlauf_niedertempheizkreis_r:
+    name: WP_Vorlauf_NiedertempHeizkreis_R
+    min: -28
+    max: 100
+    step: 0.1
+    mode: box
+    unit_of_measurement: °C
+    icon: mdi:thermometer-high
+
+  lu_betriebsstd_feinstaubfilter_r:
+    name: LU_Betriebsstd_Feinstaubfilter_R
+    min: 0
+    max: 10000000
+    step: 1
+    mode: box
+    unit_of_measurement: h
+    icon: mdi:clock-outline
+
+  lu_betriebsstd_grobstaubfilter_r:
+    name: LU_Betriebsstd_Grobstaubfilter_R
+    min: 0
+    max: 10000000
+    step: 1
+    mode: box
+    unit_of_measurement: h
+    icon: mdi:clock-outline
+
+  lu_betriebsstd_heizung_r:
+    name: LU_Betriebsstd_Heizung_R
+    min: 0
+    max: 10000000
+    step: 1
+    mode: box
+    unit_of_measurement: h
+    icon: mdi:clock-outline
+
+  lu_betriebsstd_heizstufe1_r:
+    name: LU_Betriebsstd_Heizstufe1_R
+    min: 0
+    max: 10000000
+    step: 1
+    mode: box
+    unit_of_measurement: h
+    icon: mdi:clock-outline
+
+  lu_betriebsstd_heizstufe2_r:
+    name: LU_Betriebsstd_Heizstufe2_R
+    min: 0
+    max: 10000000
+    step: 1
+    mode: box
+    unit_of_measurement: h
+    icon: mdi:clock-outline
+
+  wp_status_waermepumpe_restzeit_r:
+    name: WP_Status_Waermepumpe_Restzeit_R
+    min: 0
+    max: 3600
+    step: 1
+    mode: box
+    unit_of_measurement: s
+    icon: mdi:clock-outline
+
+  lu_gesamt_befoerderte_m3_r:
+    name: LU_Gesamt_befoerderte_m3_R
+    min: 0
+    max: 600000000
+    step: 1
+    mode: box
+    unit_of_measurement: m3
+    icon: mdi:air-filter
+
+  lu_gesamt_befoerderte_luftmenge_seit_filterwechsel_r:
+    name: LU_Gesamt_befoerderte_Luftmenge_seit_Filterwechsel_R
+    min: 0
+    max: 600000000
+    step: 1
+    mode: box
+    unit_of_measurement: m3
+    icon: mdi:air-filter
+
+input_select:
+  lu_betriebsart_rw:
+    name: LU_Betriebsart_RW
+    options:
+      - Manuelle Stufe 0
+      - Manuelle Stufe 1
+      - Manuelle Stufe 2
+      - Manuelle Stufe 3
+      - Automatikbetrieb
+      - Party
+    initial: Automatikbetrieb
+    icon: mdi:fan
+
+  wp_status_wp_r:
+    name: WP_Status_WP_R
+    options:
+      - Wiedereinschaltsperre
+      - Wärmepumpe aus
+      - Vorlaufzeit Solepump
+      - Vorlaufzeit Ventilatoren
+      - Öffnen Heissgasventil
+      - Öffnen Flüssiggasventil
+      - Start Kompressor
+      - Mindestlaufzeit Wärmepumpe
+      - Wärmepumpe ein
+      - Kältemittle absaugen
+      - Beim Abtauen absaugen
+      - Abtauen ein
+      - Nach Abtauen abtropfen
+    initial: Wärmepumpe ein
+    icon: mdi:heat-wave
+
+input_boolean:
+  lu_feinstaubfilterwechseln_r:
+    name: LU_FeinstaubfilterWechseln_R
+    icon: mdi:exclamation
+
+  lu_grobstaubfilterwechseln_r:
+    name: LU_GrobstaubfilterWechseln_R
+    icon: mdi:exclamation
+
+  lu_revisionstuere_r:
+    name: LU_Revisionstuere_R
+    icon: mdi:exclamation
+
+  wp_anforderung_brauchwasserheizung_waermepumpe_r:
+    name: WP_Anforderung_Brauchwasserheizung_Waermepumpe_R
+    icon: mdi:sun-thermometer
+
+  wp_anforderung_passive_kuehlung_r:
+    name: WP_Anforderung_Passive_Kuehlung_R
+    icon: mdi:snowflake-thermometer
+
+  wp_anforderung_raumheizstufe_1_r:
+    name: WP_Anforderung_RaumHeizstufe_1_R
+    icon: mdi:sun-thermometer
+
+  wp_anforderung_raumheizstufe_2_r:
+    name: WP_Anforderung_RaumHeizstufe_2_R
+    icon: mdi:sun-thermometer
+
+  wp_anforderung_solaranlage_r:
+    name: WP_Anforderung_Solaranlage_R
+    icon: mdi:sun-thermometer
+
+  wp_anforderung_sole_kuehlung_r:
+    name: WP_Anforderung_Sole_Kuehlung_R
+    icon: mdi:snowflake-thermometer
+
+  wp_anforderung_sole_waermepumpe_r:
+    name: WP_Anforderung_Sole_Waermepumpe_R
+    icon: mdi:sun-thermometer
+
+  wp_hochdruck_waermepumpe_r:
+    name: WP_Hochdruck_Waermepumpe_R
+    icon: mdi:exclamation
+
+  wp_kuehlung_vorhanden_r:
+    name: WP_Kuehlung_vorhanden_R
+    icon: mdi:power
+
+  wp_niederdruck_waermepumpe_r:
+    name: WP_Niederdruck_Waermepumpe_R
+    icon: mdi:exclamation
+
+  wp_solaranlage_vorhanden_r:
+    name: WP_Solaranlage_vorhanden_R
+    icon: mdi:power
+
+  wp_waermepumpe_r:
+    name: WP_Waermepumpe_R
+    icon: mdi:power
+
+template:
+  - sensor:
+      - name: "Raumtemperatur"
+        unique_id: "dw_raum_temp"
+        state: >-
+          {{ states.input_number.lu_raum_rw.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Aussenluft Temperatur"
+        unique_id: "dw_aussenluft_temp"
+        state: >-
+          {{ states.input_number.wp_aussenluft_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Boilertemperatur"
+        unique_id: "dw_boiler_temp"
+        state: >-
+          {{ states.input_number.wp_boiler_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Boilertemperatur Solar"
+        unique_id: "dw_boiler_solar_temp"
+        state: >-
+          {{ states.input_number.wp_boilerfuehler_solar_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Boilertemperatur WP"
+        unique_id: "dw_boiler_wp_temp"
+        state: >-
+          {{ states.input_number.wp_boilerfuehler_wp_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Solarkollektor Temperatur"
+        unique_id: "dw_solarkollektor_temp"
+        state: >-
+          {{ states.input_number.wp_solarkollektor_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Vorlauf Niedertemp."
+        unique_id: "dw_vorlauf_nieder_temp"
+        state: >-
+          {{ states.input_number.wp_vorlauf_niedertempheizkreis_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Sole Temperatur"
+        unique_id: "dw_sole_temp"
+        state: >-
+          {{ states.input_number.wp_sole_r.state | float }}
+        unit_of_measurement: "°C"
+
+  - sensor:
+      - name: "Status WP Restzeit"
+        unique_id: "dw_status_wp_restzeit"
+        state: >-
+          {{ states.input_number.wp_status_waermepumpe_restzeit_r.state | float }}
+        unit_of_measurement: "s"
+
+  - sensor:
+      - name: "Betriebsstunden Feinstaubfilter"
+        unique_id: "dw_betrstd_feinstb"
+        state: >-
+          {{ states.input_number.lu_betriebsstd_feinstaubfilter_r.state | float }}
+        unit_of_measurement: "h"
+
+  - sensor:
+      - name: "Betriebsstunden Grobstaubfilter"
+        unique_id: "dw_betrstd_grobstb"
+        state: >-
+          {{ states.input_number.lu_betriebsstd_grobstaubfilter_r.state | float }}
+        unit_of_measurement: "h"
+
+  - sensor:
+      - name: "Betriebsstunden Heizstufe 1"
+        unique_id: "dw_betrstd_heiz1"
+        state: >-
+          {{ states.input_number.lu_betriebsstd_heizstufe1_r.state | float }}
+        unit_of_measurement: "h"
+
+  - sensor:
+      - name: "Betriebsstunden Heizstufe 2"
+        unique_id: "dw_betrstd_heiz2"
+        state: >-
+          {{ states.input_number.lu_betriebsstd_heizstufe2_r.state | float }}
+        unit_of_measurement: "h"
+
+  - sensor:
+      - name: "Betriebsstunden Heizung"
+        unique_id: "dw_betrstd_heizung"
+        state: >-
+          {{ states.input_number.lu_betriebsstd_heizung_r.state | float }}
+        unit_of_measurement: "h"
+
+  - sensor:
+      - name: "Zuluft Drezahl"
+        unique_id: "dw_zuluft_drz"
+        state: >-
+          {{ states.input_number.lu_drehzahlzuluft_r.state | float }}
+        unit_of_measurement: "upm"
+
+  - sensor:
+      - name: "Abluft Drezahl"
+        unique_id: "dw_abluft_drz"
+        state: >-
+          {{ states.input_number.lu_drehzahlabluft_r.state | float }}
+        unit_of_measurement: "upm"
+
+  - sensor:
+      - name: "Ges. geförderte Luftmenge"
+        unique_id: "dw_gef_luft"
+        state: >-
+          {{ states.input_number.lu_gesamt_befoerderte_m3_r.state | float }}
+        unit_of_measurement: "m3"
+
+  - sensor:
+      - name: "Geförderte Luftmenge seit Filterwechsel"
+        unique_id: "dw_gef_luft_filter"
+        state: >-
+          {{ states.input_number.lu_gesamt_befoerderte_luftmenge_seit_filterwechsel_r.state | float }}
+        unit_of_measurement: "m3"
+
+  - sensor:
+      - name: "Aktive Lüfterstufe"
+        unique_id: "dw_akt_luefterstufe"
+        state: >-
+          {{ states.input_number.lu_aktive_luefterstufe.state | int}}
+
+  - sensor:
+      - name: "Status Wärmepumpe"
+        state: >
+          {{states('input_select.wp_status_wp_r')}}
+        unique_id: dw_wp_status
+
+  - binary_sensor:
+      - name: "Anforderung Raumheizst. 1"
+        unique_id: dw_anford_heizung_1
+        state: >
+          {{ states.input_boolean.wp_anforderung_raumheizstufe_1_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Wasser WP"
+        unique_id: dw_anford_wasser_wp
+        state: >
+          {{ states.input_boolean.wp_anforderung_brauchwasserheizung_waermepumpe_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Passive Kühlung"
+        unique_id: dw_anford_pass_kuehlung
+        state: >
+          {{ states.input_boolean.wp_anforderung_passive_kuehlung_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Raumheizst. 2"
+        unique_id: dw_anford_heizung_2
+        state: >
+          {{ states.input_boolean.wp_anforderung_raumheizstufe_2_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Solar"
+        unique_id: dw_anford_solar
+        state: >
+          {{ states.input_boolean.wp_anforderung_solaranlage_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Sole Kühlung"
+        unique_id: dw_anford_sole_kuehlung
+        state: >
+          {{ states.input_boolean.wp_anforderung_sole_kuehlung_r.state }}
+
+  - binary_sensor:
+      - name: "Anforderung Sole WP"
+        unique_id: dw_anford_sole_wp
+        state: >
+          {{ states.input_boolean.wp_anforderung_sole_waermepumpe_r.state }}
+
+  - binary_sensor:
+      - name: "Hochdruck WP"
+        unique_id: dw_hochdruck_wp
+        device_class: problem
+        state: >
+          {{ states.input_boolean.wp_hochdruck_waermepumpe_r.state }}
+
+  - binary_sensor:
+      - name: "Niederdruck WP"
+        unique_id: dw_niederdruck_wp
+        device_class: problem
+        state: >
+          {{ states.input_boolean.wp_niederdruck_waermepumpe_r.state }}
+
+  - binary_sensor:
+      - name: "Kühlung vorhanden"
+        unique_id: dw_kuehlung_vorh
+        state: >
+          {{ states.input_boolean.wp_kuehlung_vorhanden_r.state }}
+
+  - binary_sensor:
+      - name: "Solar vorhanden"
+        unique_id: dw_solar_vorh
+        state: >
+          {{ states.input_boolean.wp_solaranlage_vorhanden_r.state }}
+
+  - binary_sensor:
+      - name: "WP läuft"
+        unique_id: dw_wp_running
+        state: >
+          {{ states.input_boolean.wp_waermepumpe_r.state }}
+
+  - binary_sensor:
+      - name: "Feinstaubfilter wechseln"
+        unique_id: dw_feinstfltr_wechseln
+        device_class: problem
+        state: >
+          {{ states.input_boolean.lu_feinstaubfilterwechseln_r.state }}
+
+  - binary_sensor:
+      - name: "Grobstaubfilter wechseln"
+        unique_id: dw_grobstfltr_wechseln
+        device_class: problem
+        state: >
+          {{ states.input_boolean.lu_grobstaubfilterwechseln_r.state }}
+
+  - binary_sensor:
+      - name: "Revisionstüre offen"
+        unique_id: dw_revisionstuere
+        device_class: problem
+        state: >
+          {{ states.input_boolean.lu_revisionstuere_r.state }}

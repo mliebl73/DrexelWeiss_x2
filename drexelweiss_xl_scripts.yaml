@@ -1,0 +1,1071 @@
+# set_solltemp:
+#   alias: set_solltemp
+#   sequence:
+#     - service: input_number.set_value
+#       data:
+#         value: 120
+#       target:
+#         entity_id: input_number.dw_device
+#     - service: input_number.set_value
+#       data:
+#         value: 5160
+#       target:
+#         entity_id: input_number.dw_address
+#     - service: input_number.set_value
+#       data:
+#         value: "{{ ((states('input_number.lu_raumsoll_rw')) | float * 1000) | int }}"
+#       target:
+#         entity_id: input_number.dw_value
+#     - service: button.press
+#       data: {}
+#       target:
+#         entity_id: button.dw_set_soll_temp
+#   mode: single
+
+incr_warmwasser_soll_solar:
+  alias: incr_warmwasser_soll_solar
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: "{{ ((states('input_number.wp_brauchwasser_solltemp_rw')) | int) +5 }}"
+      target:
+        entity_id: input_number.wp_brauchwasser_solltemp_rw
+
+decr_warmwasser_soll_solar:
+  alias: decr_warmwasser_soll_solar
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: "{{ ((states('input_number.wp_brauchwasser_solltemp_rw')) | int) -5 }}"
+      target:
+        entity_id: input_number.wp_brauchwasser_solltemp_rw
+
+
+    
+dw_read_200:
+  alias: dw_read_200
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 201
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_202:
+  alias: dw_read_202
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 203
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_216:
+  alias: dw_read_216
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 217
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_226:
+  alias: dw_read_226
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 227
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_800:
+  alias: dw_read_800
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 801
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_900:
+  alias: dw_read_900
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 901
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_902:
+  alias: dw_read_902
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 903
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_912:
+  alias: dw_read_912
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 913
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_914:
+  alias: dw_read_914
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 915
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_926:
+  alias: dw_read_926
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 927
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_928:
+  alias: dw_read_928
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 929
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_938:
+  alias: dw_read_938
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 939
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_946:
+  alias: dw_read_946
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 947
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_960:
+  alias: dw_read_960
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 961
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_1066:
+  alias: dw_read_1066
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1067
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_1184:
+  alias: dw_read_1184
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1185
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_1186:
+  alias: dw_read_1186
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1187
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_5002:
+  alias: dw_read_5002
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5003
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_5016:
+  alias: dw_read_5016
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5017
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_5212:
+  alias: dw_read_5212
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5213
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_7004:
+  alias: dw_read_7004
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 7005
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_7002:
+  alias: dw_read_7002
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 7003
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_7500:
+  alias: dw_read_7500
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 130
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 7501
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+
+dw_read_wp_200:
+  alias: dw_read_wp_200
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 201
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_202:
+  alias: dw_read_wp_202
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 203
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_206:
+  alias: dw_read_wp_206
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 207
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_212:
+  alias: dw_read_wp_212
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 213
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_214:
+  alias: dw_read_wp_214
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 215
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_216:
+  alias: dw_read_wp_216
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 217
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_222:
+  alias: dw_read_wp_222
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 223
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_224:
+  alias: dw_read_wp_224
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 225
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_240:
+  alias: dw_read_wp_240
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 241
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_242:
+  alias: dw_read_wp_242
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 243
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_244:
+  alias: dw_read_wp_244
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 245
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1032:
+  alias: dw_read_wp_1032
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1033
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1034:
+  alias: dw_read_wp_1034
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1035
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1036:
+  alias: dw_read_wp_1036
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1037
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1044:
+  alias: dw_read_wp_1044
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1045
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1140:
+  alias: dw_read_wp_1140
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1141
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1142:
+  alias: dw_read_wp_1142
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1143
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1196:
+  alias: dw_read_wp_1196
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1197
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1314:
+  alias: dw_read_wp_1314
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1315
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1316:
+  alias: dw_read_wp_1316
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1317
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_1320:
+  alias: dw_read_wp_1320
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 1321
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5016:
+  alias: dw_read_wp_5016
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5017
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5064:
+  alias: dw_read_wp_5064
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5065
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5176:
+  alias: dw_read_wp_5176
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5177
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5178:
+  alias: dw_read_wp_5178
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5179
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5180:
+  alias: dw_read_wp_5180
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5181
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5182:
+  alias: dw_read_wp_5182
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5183
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5186:
+  alias: dw_read_wp_5186
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5187
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5190:
+  alias: dw_read_wp_5190
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5191
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5192:
+  alias: dw_read_wp_5192
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5193
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5376:
+  alias: dw_read_wp_5376
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5377
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5378:
+  alias: dw_read_wp_5378
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5379
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5380:
+  alias: dw_read_wp_5380
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5381
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
+dw_read_wp_5382:
+  alias: dw_read_5382
+  sequence:
+    - service: input_number.set_value
+      data:
+        value: 140
+      target:
+        entity_id: input_number.dw_device
+    - service: input_number.set_value
+      data:
+        value: 5383
+      target:
+        entity_id: input_number.dw_address
+    - service: button.press
+      data: {}
+      target:
+        entity_id: button.nodered_fa4ef61ac29b4a09
+  mode: single
