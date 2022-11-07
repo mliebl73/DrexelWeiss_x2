@@ -14,6 +14,7 @@ homeassistant:
 The scripts and automations are in saparate directories under config/scripts and config/automations, respectively and added with:
 
 automation: !include_dir_merge_list automations/
+
 script: !include_dir_merge_named scripts/
 
 Note: I moved my other scripts.yaml and my automations.yaml in those directories as well so that they load as well
