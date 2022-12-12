@@ -6,14 +6,17 @@ Thanks to ikewestbrook from the home assistant community for the initial Node-RE
 
 I did not try to re-integrate the files into an empty HASS installation, so no guarantee this will work right out of the box. But I am happy to share whatever would be missing ;)
 
+Packages used for Node-Red are node-red-contrib-home-assistant-websocket and the node-red-node-serialport.
+
 The helpers and sensors are included as a package in my configuration.yaml, by adding the following at the beginning:
 
 homeassistant:
   packages: !include_dir_named packages
   
-The scripts and automations are in saparate directories under config/scripts and config/automations, respectively and added with:
+The scripts and automations are in saparate directories under config/scripts and config/automations (maintaining the UI based automations with the second line), respectively and added with:
 
-automation: !include_dir_merge_list automations/
+automation manual: !include_dir_merge_list automations/
+automation ui: !include automations.yaml
 
 script: !include_dir_merge_named scripts/
 
