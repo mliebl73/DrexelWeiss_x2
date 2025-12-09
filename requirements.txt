@@ -2,6 +2,12 @@
 # 
 # IMPORTANT: urllib3 is pinned to v1.26.x for compatibility with LibreSSL 2.8.3
 # Note: urllib3 1.26.x has known vulnerabilities (fixed in v2.6+)
+# 
+# ACTION REQUIRED: Periodically check if you can upgrade to urllib3 v2.6+ by:
+# 1. Upgrading your Python installation to one compiled with OpenSSL 1.1.1+
+# 2. Running: python -c "import ssl; print(ssl.OPENSSL_VERSION)"
+# 3. If OpenSSL >= 1.1.1, update this file to: urllib3>=2.6.0
+# 
 # For better security, upgrade your Python/OpenSSL to use urllib3 v2.6+
 # See README.md Troubleshooting section for details
 urllib3>=1.26.0,<2.0.0

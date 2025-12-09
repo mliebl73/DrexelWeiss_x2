@@ -57,7 +57,7 @@ NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' 
 
 For macOS users:
 - Install Python from python.org instead of using the system Python
-- Or use Homebrew: `brew install python@3.11` (or later)
+- Or use Homebrew: `brew install python@3.9` (or later stable version)
 - Or upgrade macOS to a newer version
 
 **Alternative Solution (Quick Fix):** The `requirements.txt` file pins urllib3 to version 1.26.x for compatibility with LibreSSL 2.8.3. Install dependencies using:
