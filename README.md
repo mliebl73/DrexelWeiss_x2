@@ -53,7 +53,14 @@ If you encounter the following warning:
 NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'
 ```
 
-**Solution:** This has been addressed in the `requirements.txt` file by pinning urllib3 to version 1.26.x. Make sure to install dependencies using:
+**Recommended Solution (Best for Security):** Upgrade your Python installation or system OpenSSL library to a version that includes OpenSSL 1.1.1+. This allows you to use urllib3 v2.6+ which includes important security fixes.
+
+For macOS users:
+- Install Python from python.org instead of using the system Python
+- Or use Homebrew: `brew install python@3.11` (or later)
+- Or upgrade macOS to a newer version
+
+**Alternative Solution (Quick Fix):** The `requirements.txt` file pins urllib3 to version 1.26.x for compatibility with LibreSSL 2.8.3. Install dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
@@ -63,4 +70,4 @@ If you already have urllib3 v2 installed, you can downgrade it:
 pip install 'urllib3<2.0'
 ```
 
-Alternatively, you can upgrade your Python installation or OpenSSL library to a version that includes OpenSSL 1.1.1+.
+**Note:** urllib3 1.26.x has known security vulnerabilities that are fixed in v2.6+. Use this workaround only if you cannot upgrade your SSL library, and be aware of the security implications.

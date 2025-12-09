@@ -1,4 +1,8 @@
 # Python dependencies for TID processing script
-# Pin urllib3 to v1.26.x to avoid OpenSSL compatibility issues with LibreSSL
+# 
+# IMPORTANT: urllib3 is pinned to v1.26.x for compatibility with LibreSSL 2.8.3
+# Note: urllib3 1.26.x has known vulnerabilities (fixed in v2.6+)
+# For better security, upgrade your Python/OpenSSL to use urllib3 v2.6+
+# See README.md Troubleshooting section for details
 urllib3>=1.26.0,<2.0.0
 requests>=2.28.0
